@@ -1,0 +1,551 @@
+/* ============================================================
+   SAINI FURNITURE - HOME PAGE (PREMIUM STYLING)
+   ============================================================ */
+
+/* Hero Overrides if needed */
+.hero-carousel {
+    margin-bottom: 0;
+}
+
+/* Marquee Luxury Refinement */
+.furniture-marquee {
+    background: var(--grad-luxury);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 1rem 0;
+}
+
+.marquee-link {
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.marquee-link:hover {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-gray-900);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-gray-500);
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* Trust Badges */
+.trust-badges {
+    padding: 2.5rem 0;
+    background: var(--color-bg-warm);
+    border-top: 1px solid var(--color-gray-100);
+    border-bottom: 1px solid var(--color-gray-100);
+}
+
+.trust-badges-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    color: var(--color-gray-700);
+    font-size: 0.95rem;
+}
+
+.trust-badge-icon {
+    font-size: 1.5rem;
+}
+
+/* Category Cluster (Nodes) */
+.section-featured {
+    background: white;
+    padding: 8rem 0;
+}
+
+.category-cluster-wrapper {
+    margin: 5rem 0;
+}
+
+.category-cluster-container {
+    height: 600px;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cluster-node {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s var(--ease-out-expo);
+    border: 1px solid var(--color-gray-100);
+}
+
+.cluster-node:hover {
+    transform: scale(1.1) translateY(-10px);
+    z-index: 10;
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary-light);
+}
+
+.pos-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: var(--grad-luxury);
+    color: white;
+    z-index: 5;
+}
+
+.pos-tl {
+    top: 0;
+    left: 0;
+}
+
+.pos-tr {
+    top: 0;
+    right: 0;
+}
+
+.pos-br {
+    bottom: 0;
+    right: 0;
+}
+
+.pos-bl {
+    bottom: 0;
+    left: 0;
+}
+
+.node-text {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+
+.cluster-node:hover .node-text {
+    opacity: 1;
+}
+
+.node-text h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.cluster-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.node-image {
+    width: 100%;
+    height: 100%;
+}
+
+.node-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Progress Steps / How it works */
+.section-light {
+    padding: 8rem 0;
+}
+
+.process-steps {
+    margin-top: 5rem;
+}
+
+.process-connector {
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background: var(--color-gray-200);
+    z-index: -1;
+}
+
+/* 3D Showcase */
+.showcase-3d {
+    padding: 5rem 0;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.showcase-cube {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: rotateCube 20s linear infinite;
+}
+
+.cube-face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: white;
+    border: 1px solid var(--color-primary-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 50px rgba(139, 69, 19, 0.1);
+    transition: all 0.3s;
+}
+
+.cube-face:hover {
+    background: var(--color-bg-warm);
+    transform: scale(1.05);
+    /* slightly problematic in 3d space but looks ok */
+}
+
+.cube-emoji {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.cube-label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.cube-front {
+    transform: translateZ(150px);
+}
+
+.cube-back {
+    transform: rotateY(180deg) translateZ(150px);
+}
+
+.cube-right {
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.cube-left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.cube-top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.cube-bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+}
+
+@keyframes rotateCube {
+    from {
+        transform: rotateX(0) rotateY(0);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/* Recent Projects Overrides */
+.recent-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.recent-project-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.recent-project-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--color-secondary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.recent-project-image {
+    height: 280px;
+    overflow: hidden;
+}
+
+.recent-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.recent-project-card:hover .recent-project-image img {
+    transform: scale(1.15);
+}
+
+.recent-project-content {
+    padding: 2rem;
+}
+
+.project-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-secondary);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+}
+
+/* Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.service-card {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: white;
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--color-gray-100);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.service-icon {
+    font-size: 3.5rem;
+}
+
+/* Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: var(--radius-2xl);
+    position: relative;
+    box-shadow: var(--shadow-md);
+}
+
+.testimonial-quote-mark {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--color-gray-100);
+    z-index: 0;
+}
+
+.testimonial-text {
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-gray-700);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--grad-luxury);
+    color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+/* CTA Section */
+.section-cta-glow {
+    padding: 10rem 0;
+    background: var(--grad-luxury);
+    position: relative;
+    text-align: center;
+}
+
+.section-cta-glow .section-header p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-glow {
+    background: #25D366;
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 800;
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.4);
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(37, 211, 102, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+
+    .recent-projects-grid,
+    .services-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .stats-row,
+    .trust-badges-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recent-projects-grid,
+    .services-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-cluster-container {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .cluster-node {
+        position: static;
+        transform: none;
+        width: 150px;
+        height: 150px;
+    }
+
+    .pos-center {
+        width: 100%;
+        height: 100px;
+        border-radius: 50px;
+    }
+
+    .process-connector {
+        display: none;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}
