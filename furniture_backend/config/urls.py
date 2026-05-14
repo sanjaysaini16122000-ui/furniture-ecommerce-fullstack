@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
+from django.http import JsonResponse
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
@@ -40,6 +41,14 @@ urlpatterns = [
     path('api/upload/image/', include('common.upload_urls')),
     path('api/contact/', include('contact.urls')),
     path('api/visualizer/', include('visualizer.urls')),
+    
+    # Root URL
+    path('', lambda request: JsonResponse({
+        "message": "Welcome to Furniture Ecommerce API",
+        "status": "Running",
+        "admin_panel": "/admin/",
+        "documentation": "https://github.com/sanjaysaini16122000-ui/furniture-ecommerce-fullstack"
+    })),
 ]
 
 # Serve media files in development
